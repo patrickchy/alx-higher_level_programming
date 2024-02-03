@@ -1,0 +1,28 @@
+>>> print_square = __import__('4-print_square').print_square
+
+Test case 1: size as a positive integer
+
+>>> print_square(4)
+####
+####
+####
+####
+
+Test case 2: as an empty string
+>>> print("")
+<BLANKLINE>
+
+Test case 3: size as a string
+>>> print_square("four")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Test case 4: size < 0
+>>> print_square(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Test case 5: size as float and less than 0
+>>> print_square(0.1)
+Traceback (most recent call last):
+TypeError: size must be an integer

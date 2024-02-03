@@ -1,0 +1,48 @@
+# Test cases for add_integer function
+
+# Import the add_integer function
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Test case 1
+>>> add_integer(1, 2)
+3
+
+# Test case 2: testing for mixed integers
+>>> add_integer(100, -2)
+98
+
+# Test case 3: testing with the default of b
+>>> add_integer(2)
+100
+
+#Test case 5: testing Floats
+>>> add_integer(2.5, 3.7)
+5
+
+#Test case 6: Zero
+>>> add_integer(0, 0)
+0
+
+# Test case 7: testing with float numbers
+>>> add_integer(100.3, -2)
+98
+
+# Test case 8: testing for two negative numbers
+>>> add_integer(-1, -1)
+-2
+
+#Test case 9: testing default with negative integer
+>>> add_integer(-5)
+93
+
+# Test case 10: testing with non integer/float number
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+# Test case 11: testing with None
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
