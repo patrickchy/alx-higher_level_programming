@@ -1,33 +1,16 @@
 #!/usr/bin/python3
-""" 
-    This module a function to add integers
-    The function returns the sum as an integer
-    5 line module count
-"""
+"""Module containing a dummy adder function for testing"""
 
 
 def add_integer(a, b=98):
+    """ adds integers
+        Arguments:
+        @a: first integer
+        @b: second integer, defaults to 98 if not given
+    """
 
-    """ Adds two integers and returns the sum
-            a: first integer or float number
-            b: second integer or float number """
-
-    if not isinstance(a, int):
-
-        if isinstance(a, float):
-
-            a = int(a)
-
-        else:
-
-            raise TypeError("a must be an integer")
-
-    if not isinstance(b, int):
-
-        if isinstance(b, float):
-
-            b = int(b)
-        else:
-            raise TypeError("b must be an integer")
-
-    return a + b
+    if type(a) not in [int, float]:
+        raise TypeError("a must be an integer")
+    if type(b) not in [int, float]:
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
